@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    img {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 60%;
+	height:60%;
+	}
+	div{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 60%;
+	height:60%; 
+	}
+    </style>
+</head>
+<body>
+      <h1 align="center">Video Streaming Demonistration</h1>
+    <img id="bg" class="center" src="{{ url_for('video_feed') }}">
+    <div class="center">
+    <audio style="width: 60%;" controls>
+        <source src="{{ url_for('audio') }}" type="audio/x-wav;codec=pcm">
+        Your browser does not support the audio element.
+    </audio>
+    </div>
+</body>
+</html>
